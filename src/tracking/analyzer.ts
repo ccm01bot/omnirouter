@@ -58,7 +58,7 @@ export class Analyzer {
       ? new Date().toISOString().slice(0, 10)
       : new Date().toISOString().slice(0, 7);
     const row = this.db.prepare(
-      "SELECT spent_cents as spent, limit_cents as limit FROM cost_budget WHERE period = ? AND period_key = ?"
+      "SELECT spent_cents as spent, limit_cents as [limit] FROM cost_budget WHERE period = ? AND period_key = ?"
     ).get(period, key) as { spent: number; limit: number | null } | undefined;
     return row ?? { spent: 0, limit: null };
   }
