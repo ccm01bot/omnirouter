@@ -6,6 +6,12 @@ import { GeminiProvider } from "./gemini.js";
 import { PerplexityProvider } from "./perplexity.js";
 import { MoonshotProvider } from "./moonshot.js";
 import { ZaiProvider } from "./zai.js";
+import { GrokProvider } from "./grok.js";
+import { DeepSeekProvider } from "./deepseek.js";
+import { MistralProvider } from "./mistral.js";
+import { GroqProvider } from "./groq.js";
+import { TogetherProvider } from "./together.js";
+import { CohereProvider } from "./cohere.js";
 
 export class ProviderRegistry {
   private providers: Map<string, BaseProvider> = new Map();
@@ -18,6 +24,12 @@ export class ProviderRegistry {
       new PerplexityProvider(),
       new MoonshotProvider(),
       new ZaiProvider(),
+      new GrokProvider(),
+      new DeepSeekProvider(),
+      new MistralProvider(),
+      new GroqProvider(),
+      new TogetherProvider(),
+      new CohereProvider(),
     ];
 
     for (const provider of all) {

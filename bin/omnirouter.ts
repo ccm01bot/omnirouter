@@ -80,7 +80,7 @@ program
       }
     }
 
-    const unconfigured = ["anthropic", "openai", "gemini", "perplexity", "moonshot", "zai"].filter(
+    const unconfigured = ["anthropic", "openai", "gemini", "grok", "deepseek", "mistral", "perplexity", "groq", "together", "cohere", "moonshot", "zai"].filter(
       (p) => !configured.includes(p)
     );
     if (unconfigured.length) {
